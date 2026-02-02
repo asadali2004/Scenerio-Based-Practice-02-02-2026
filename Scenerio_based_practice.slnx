@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="01_LMS/01_LMS.csproj" />
+  <Project Path="02_Hotel_Room_Booking_System/02_Hotel_Room_Booking_System.csproj" />
+</Solution>
