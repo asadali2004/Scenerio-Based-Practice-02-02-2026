@@ -1,7 +1,7 @@
 using System.Collections.Concurrent;
 namespace LMS
 {
-    public class LibraryUtility
+    public class LibraryUtility : ILibraryUtility
     {
         public void AddBook(string title, string author, string genre, int year)
         {
@@ -10,22 +10,23 @@ namespace LMS
 
         public SortedDictionary<string, List<Book>> GroupBooksByGenre()
         {
-            return new SortedDictionary<string, List<Book>>
-            (UserInterface.BookDetails.Values
+            var result = UserInterface.BookDetails.Values
                 .GroupBy(b => b.Genre)
                 .OrderBy(e => e.Key)
-                .ToDictionary(k => k.Key, b => b.ToList())
-            );
+                .ToDictionary(k => k.Key, b => b.ToList());
+            return new SortedDictionary<string, List<Book>>(result);
         }
 
         public List<Book> GetBooksByAuthor(string author)
         {
-            return UserInterface.BookDetails.Values.Where(b => b.Author == author).ToList();
+            List<Book> result = UserInterface.BookDetails.Values.Where(b => b.Author == author).ToList();
+            return result;
         }
 
         public int GetTotalBooksCount()
         {
-            return UserInterface.BookDetails.Count;
+            int result = UserInterface.BookDetails.Count;
+            return result;
         }
     }
 }
