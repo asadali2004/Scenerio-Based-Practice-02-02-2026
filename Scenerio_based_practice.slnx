@@ -1,4 +1,10 @@
 <Solution>
   <Project Path="01_LMS/01_LMS.csproj" />
   <Project Path="02_Hotel_Room_Booking_System/02_Hotel_Room_Booking_System.csproj" />
+  <Project Path="03_Employee_Management_System/03_Employee_Management_System.csproj" />
+  <Project Path="BikeRental/BikeRental.csproj" />
+  <Project Path="Q1_Factory_Robot_Hazar_Analyzer/Q1_Factory_Robot_Hazar_Analyzer.csproj" />
+  <Project Path="Q2_Flip_Key/Q2_Flip_Key.csproj" />
+  <Project Path="Q3_Stream_Buzz/Q3_Stream_Buzz.csproj" />
+  <Project Path="Q4_TestCase_Bank_Account/Q4_TestCase_Bank_Account.csproj" />
 </Solution>
